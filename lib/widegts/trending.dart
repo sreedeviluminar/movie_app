@@ -31,15 +31,21 @@ class TrendingMovies extends StatelessWidget {
                           context,
                           MaterialPageRoute(
                               builder: (context) => Description(
+
                                 name: trending[index]['title'] ?? 'Data not availabele',
+
                                 bannerurl: trending[index]['backdrop_path'] != null
                                     ? 'https://image.tmdb.org/t/p/w500' + trending[index]['backdrop_path']
                                     : 'https://thumbs.dreamstime.com/z/error-sign-error-message-white-background-error-sign-error-message-simple-vector-icon-125098995.jpg',
+
                                 posterurl: trending[index]['poster_path'] != null
                                     ? 'https://image.tmdb.org/t/p/w500' + trending[index]['poster_path']
                                     : 'https://thumbs.dreamstime.com/z/error-sign-error-message-white-background-error-sign-error-message-simple-vector-icon-125098995.jpg',
+
                                 description: trending[index]['overview'] ?? 'Data not availabele',
+
                                 vote: trending[index]['vote_average']?.toString() ?? '0.00',
+
                                 launch_on: trending[index]['release_date'] ?? 'Data not availabele',
                               )
                           )
